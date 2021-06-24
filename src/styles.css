@@ -1,0 +1,44 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#print {
+  visibility: hidden;
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+
+  html {
+    background-color: #ffffff;
+    margin: 0px;
+  }
+
+  body {
+    border: solid 1px blue;
+    margin: 10mm 15mm 10mm 15mm;
+  }
+
+  #not-print {
+    visibility: hidden;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #printBtn {
+    visibility: hidden !important;
+  }
+
+  #print {
+    visibility: visible !important;
+    text-align: Center !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .legend {
+    background: #9dd2e2 !important;
+  }
+}
